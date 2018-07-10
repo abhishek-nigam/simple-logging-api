@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(celebrate({
     body: Joi.object().keys({
         user: Joi.number().valid([0, 1, 2]).required(),
-        userId: Joi.string().required(),
+        userId: Joi.string().optional(),
         action: Joi.string().required(),
         message: Joi.string().required(),
         logLevel: Joi.number().valid([0, 1, 2, 3, 4, 5]).required()
