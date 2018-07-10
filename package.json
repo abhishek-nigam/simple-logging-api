@@ -8,6 +8,9 @@
   },
   "author": "Equifin",
   "license": "MIT",
+  "now": {
+    "alias": "ugpg-log"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "celebrate": "^8.0.0",

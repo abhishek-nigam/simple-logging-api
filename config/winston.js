@@ -1,5 +1,10 @@
 const winston = require('winston');
-const secrets = require('./secrets');
+
+let secrets;
+try {
+    secrets = require('./secrets');
+} catch (error) {
+}
 
 /**
  * Requiring `winston-mongodb` will expose
@@ -11,7 +16,7 @@ require('winston-mongodb');
 let options = {
     mongo: {
         level: 'silly',
-        db: secrets.mongo.dbURI,
+        db: process.env.DB_URI || (secrets && secrets.mongo.dbURI),
         collection: 'log',
     }
 }
