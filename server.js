@@ -15,7 +15,8 @@ app.use(celebrate({
         userId: Joi.string().optional().allow(""),
         action: Joi.string().required(),
         message: Joi.string().required(),
-        logLevel: Joi.number().valid([0, 1, 2, 3, 4, 5]).required()
+        logLevel: Joi.number().valid([0, 1, 2, 3, 4, 5]).required(),
+        responseData: Joi.string().optional().allow("")
     })
 }));
 
@@ -38,7 +39,8 @@ app.post("/log", (req, res) => {
         userId: req.body.userId,
         action: req.body.action,
         message: req.body.message,
-        logLevel: req.body.logLevel
+        logLevel: req.body.logLevel,
+        responseData: req.body.responseData
     })
         .save()
         .then(() => {

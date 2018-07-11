@@ -6,7 +6,8 @@ const logSchema = new Schema({
     userId: { type: String, required: false },
     action: { type: String, required: true },
     message: { type: String, required: true },
-    logLevel: { type: Number, required: true }
+    logLevel: { type: Number, required: true },
+    responseData: { type: String, required: false }
 })
 
 module.exports = mongoose.model('Log', logSchema);
