@@ -7,7 +7,9 @@ const logSchema = new Schema({
     action: { type: String, required: true },
     message: { type: String, required: true },
     logLevel: { type: Number, required: true },
-    responseData: { type: String, required: false }
+    responseData: { type: String, required: false },
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Log', logSchema);
