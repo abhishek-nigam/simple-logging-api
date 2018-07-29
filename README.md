@@ -1,6 +1,7 @@
 # Simple Logging API
 
 This is an easy to use logging API, that is hosted in a separate instance.
+<br>
 Originally developed for: [Equifin United Technologies](http://www.bankomi.com)
 
 ### Development
